@@ -1,0 +1,25 @@
+services:
+  - type: web
+    name: transindus-portal
+    runtime: docker
+    plan: free
+    autoDeploy: false
+    envVars:
+      - key: PORTAL_USER
+        value: meridian.ap
+      - key: PORTAL_PASS
+        sync: false
+      - key: OPERATOR_PASS
+        sync: false
+      - key: TEAM_KEY
+        sync: false
+      - key: ADMIN_KEY
+        sync: false
+      - key: PUBLIC_SEED
+        value: "20261101"
+      - key: HIDDEN_SEED
+        sync: false
+      - key: PORTAL_SECRET
+        generateValue: true
+      - key: CHAOS
+        value: "1"
